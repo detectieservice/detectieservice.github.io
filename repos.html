@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repositories | Detectieservice Kempen (DSK)</title>
+  <meta name="description" content="Overzicht en beschrijving van alle GitHub-repositories van Detectieservice Kempen (detectieservice).">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://detectieservice.github.io/repos.html">
+  <style>
+    :root {
+      --brand:#0b5cab; --brand-dark:#08406f; --accent:#13a89e;
+      --ink:#1a2330; --muted:#5b6675; --line:#e3e8ef; --bg:#f5f7fa; --card:#ffffff;
+    }
+    * { box-sizing:border-box; }
+    body {
+      margin:0; font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink); background:var(--bg); line-height:1.6;
+    }
+    a { color:var(--brand); }
+    .site-header {
+      background:linear-gradient(135deg,var(--brand) 0%,var(--brand-dark) 100%);
+      color:#fff; padding:48px 20px 40px;
+    }
+    .wrap { max-width:1080px; margin:0 auto; }
+    .site-header .wrap { }
+    .eyebrow { text-transform:uppercase; letter-spacing:.12em; font-size:.78rem; opacity:.85; margin:0 0 8px; }
+    .site-header h1 { margin:0 0 12px; font-size:2.1rem; line-height:1.2; }
+    .site-header p { margin:0; max-width:640px; opacity:.95; }
+    .stats { margin-top:24px; display:flex; gap:28px; flex-wrap:wrap; }
+    .stat b { display:block; font-size:1.6rem; line-height:1; }
+    .stat span { font-size:.82rem; opacity:.85; }
+    main { padding:40px 20px 64px; }
+    .repo-section { margin-bottom:48px; }
+    .repo-section h2 {
+      font-size:1.4rem; margin:0 0 4px; display:flex; align-items:center; gap:10px;
+      border-bottom:2px solid var(--line); padding-bottom:10px;
+    }
+    .count {
+      font-size:.8rem; background:var(--accent); color:#fff; border-radius:999px;
+      padding:2px 10px; font-weight:600;
+    }
+    .section-intro { color:var(--muted); margin:8px 0 20px; }
+    .repo-grid {
+      display:grid; grid-template-columns:repeat(auto-fill,minmax(290px,1fr)); gap:18px;
+    }
+    .repo-card {
+      background:var(--card); border:1px solid var(--line); border-radius:12px;
+      padding:20px; display:flex; flex-direction:column;
+      box-shadow:0 1px 2px rgba(16,32,64,.04); transition:transform .15s,box-shadow .15s;
+    }
+    .repo-card:hover { transform:translateY(-3px); box-shadow:0 8px 24px rgba(16,32,64,.10); }
+    .repo-name { margin:0 0 8px; font-size:1.08rem; word-break:break-word; }
+    .repo-name a { text-decoration:none; }
+    .repo-name a:hover { text-decoration:underline; }
+    .repo-desc { margin:0 0 14px; color:var(--muted); font-size:.94rem; flex:1; }
+    .repo-meta {
+      list-style:none; padding:0; margin:0 0 14px; display:flex; gap:18px;
+      font-size:.8rem; color:var(--muted); flex-wrap:wrap;
+    }
+    .repo-meta .label { display:block; text-transform:uppercase; letter-spacing:.06em; font-size:.66rem; color:#97a1b0; }
+    .repo-links { display:flex; gap:10px; }
+    .btn {
+      display:inline-block; padding:7px 14px; border-radius:8px; font-size:.85rem;
+      font-weight:600; text-decoration:none; background:var(--brand); color:#fff; border:1px solid var(--brand);
+    }
+    .btn:hover { background:var(--brand-dark); border-color:var(--brand-dark); }
+    .btn-ghost { background:transparent; color:var(--brand); }
+    .btn-ghost:hover { background:#eaf2fb; color:var(--brand-dark); }
+    .site-footer {
+      border-top:1px solid var(--line); padding:28px 20px; color:var(--muted); font-size:.88rem;
+      background:#fff;
+    }
+    .site-footer a { color:var(--brand); }
+    @media (max-width:560px) {
+      .site-header h1 { font-size:1.6rem; }
+      .stats { gap:18px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">Detectieservice Kempen · GitHub</p>
+      <h1>Onze repositories</h1>
+      <p>Een overzicht van alle GitHub-repositories onder de organisatie
+        <a href="https://github.com/detectieservice" rel="noopener" target="_blank" style="color:#fff;text-decoration:underline;">detectieservice</a>.
+        Elke repository bevat een statische website die via GitHub Pages wordt gehost.</p>
+      <div class="stats">
+        <div class="stat"><b>34</b><span>Repositories</span></div>
+        <div class="stat"><b>4</b><span>Categorieën</span></div>
+        <div class="stat"><b>2026-06-25</b><span>Laatst bijgewerkt</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+      <section class="repo-section">
+        <h2>DSKempen — hoofdsite &amp; kopieën <span class="count">9</span></h2>
+        <p class="section-intro">De hoofdwebsite van Detectieservice Kempen (DSK) en daarvan afgeleide kopieën.</p>
+        <div class="repo-grid">
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/detectieservice.github.io" rel="noopener" target="_blank">detectieservice.github.io</a></h3>
+          <p class="repo-desc">DSKempen</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-21</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/detectieservice.github.io" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/detectieservice.github.io/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dsk-website" rel="noopener" target="_blank">dsk-website</a></h3>
+          <p class="repo-desc"><em>Geen beschrijving beschikbaar.</em></p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-25</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dsk-website" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dsk-website/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dsk-website2" rel="noopener" target="_blank">dsk-website2</a></h3>
+          <p class="repo-desc"><em>Geen beschrijving beschikbaar.</em></p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-25</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dsk-website2" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dsk-website2/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dskempen-clone-1" rel="noopener" target="_blank">dskempen-clone-1</a></h3>
+          <p class="repo-desc">Copy of detectieservice.github.io (DSKempen)</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dskempen-clone-1" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dskempen-clone-1/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dskempen-clone-2" rel="noopener" target="_blank">dskempen-clone-2</a></h3>
+          <p class="repo-desc">Copy of detectieservice.github.io (DSKempen)</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dskempen-clone-2" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dskempen-clone-2/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dskempen-clone-3" rel="noopener" target="_blank">dskempen-clone-3</a></h3>
+          <p class="repo-desc">Copy of detectieservice.github.io (DSKempen)</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dskempen-clone-3" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dskempen-clone-3/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dskempen-clone-4" rel="noopener" target="_blank">dskempen-clone-4</a></h3>
+          <p class="repo-desc">Copy of detectieservice.github.io (DSKempen)</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dskempen-clone-4" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dskempen-clone-4/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dskempen-clone-5" rel="noopener" target="_blank">dskempen-clone-5</a></h3>
+          <p class="repo-desc">Copy of detectieservice.github.io (DSKempen)</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dskempen-clone-5" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dskempen-clone-5/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/roofrepair" rel="noopener" target="_blank">roofrepair</a></h3>
+          <p class="repo-desc">Static mirror of dskempen.be (copy of detectieservice.github.io)</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-21</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/roofrepair" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/roofrepair/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="repo-section">
+        <h2>Dakwerken Kempen — varianten <span class="count">10</span></h2>
+        <p class="section-intro">Sitevarianten rond het merk Dakwerken Kempen (dakwerkenkempen.be).</p>
+        <div class="repo-grid">
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-vloerservice" rel="noopener" target="_blank">dakwerkenkempen-vloerservice</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-vloerservice) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-vloerservice" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-vloerservice/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-allcarrent" rel="noopener" target="_blank">dakwerkenkempen-allcarrent</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-allcarrent) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-allcarrent" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-allcarrent/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-metalen" rel="noopener" target="_blank">dakwerkenkempen-metalen</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-metalen) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-metalen" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-metalen/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-marlier" rel="noopener" target="_blank">dakwerkenkempen-marlier</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-marlier) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-marlier" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-marlier/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-aralea" rel="noopener" target="_blank">dakwerkenkempen-aralea</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-aralea) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-aralea" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-aralea/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-vdp" rel="noopener" target="_blank">dakwerkenkempen-vdp</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-vdp) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-vdp" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-vdp/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-dimar" rel="noopener" target="_blank">dakwerkenkempen-dimar</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-dimar) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-dimar" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-dimar/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-floorcouture" rel="noopener" target="_blank">dakwerkenkempen-floorcouture</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-floorcouture) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-floorcouture" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-floorcouture/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenkempen-parking-diamant" rel="noopener" target="_blank">dakwerkenkempen-parking-diamant</a></h3>
+          <p class="repo-desc">Dakwerken Kempen (dakwerkenkempen-parking-diamant) — dakwerkenkempen.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenkempen-parking-diamant" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenkempen-parking-diamant/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/roofrepair-premium" rel="noopener" target="_blank">roofrepair-premium</a></h3>
+          <p class="repo-desc">Roof Repair Kempen — premium architecture-style site</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-21</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/roofrepair-premium" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/roofrepair-premium/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="repo-section">
+        <h2>Statische mirrors van externe sites <span class="count">14</span></h2>
+        <p class="section-intro">Statische kopieën (mirrors) van websites van andere bedrijven en partners.</p>
+        <div class="repo-grid">
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/marlierhaarden" rel="noopener" target="_blank">marlierhaarden</a></h3>
+          <p class="repo-desc">Static mirror of www.marlierhaarden.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/marlierhaarden" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/marlierhaarden/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/hus-dakbouw" rel="noopener" target="_blank">hus-dakbouw</a></h3>
+          <p class="repo-desc">Static mirror of hus-dakbouw.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/hus-dakbouw" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/hus-dakbouw/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/parking-diamant" rel="noopener" target="_blank">parking-diamant</a></h3>
+          <p class="repo-desc">Static mirror of parking-diamant.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/parking-diamant" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/parking-diamant/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerkenvandeneynden" rel="noopener" target="_blank">dakwerkenvandeneynden</a></h3>
+          <p class="repo-desc">Static mirror of www.dakwerkenvandeneynden.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerkenvandeneynden" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerkenvandeneynden/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/vloerservice" rel="noopener" target="_blank">vloerservice</a></h3>
+          <p class="repo-desc">Static mirror of vloerservice.com</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/vloerservice" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/vloerservice/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/metalenvandenaudenaerde" rel="noopener" target="_blank">metalenvandenaudenaerde</a></h3>
+          <p class="repo-desc">Static mirror of metalenvandenaudenaerde.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/metalenvandenaudenaerde" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/metalenvandenaudenaerde/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dimar" rel="noopener" target="_blank">dimar</a></h3>
+          <p class="repo-desc">Static mirror of www.dimar.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dimar" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dimar/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/allcarrent" rel="noopener" target="_blank">allcarrent</a></h3>
+          <p class="repo-desc">Static mirror of www.allcarrent.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/allcarrent" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/allcarrent/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/dakwerken-hendrickx" rel="noopener" target="_blank">dakwerken-hendrickx</a></h3>
+          <p class="repo-desc">Static mirror of www.dakwerken-hendrickx.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/dakwerken-hendrickx" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/dakwerken-hendrickx/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/vdphomesolutions" rel="noopener" target="_blank">vdphomesolutions</a></h3>
+          <p class="repo-desc">Static mirror of vdphomesolutions.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/vdphomesolutions" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/vdphomesolutions/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/aralea" rel="noopener" target="_blank">aralea</a></h3>
+          <p class="repo-desc">Static mirror of aralea.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/aralea" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/aralea/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/floorcouture" rel="noopener" target="_blank">floorcouture</a></h3>
+          <p class="repo-desc">Static mirror of floorcouture.be (small version)</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-24</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/floorcouture" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/floorcouture/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/gjtimmerwerken" rel="noopener" target="_blank">gjtimmerwerken</a></h3>
+          <p class="repo-desc">Static mirror of www.gjtimmerwerken.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/gjtimmerwerken" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/gjtimmerwerken/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/sbs-pro" rel="noopener" target="_blank">sbs-pro</a></h3>
+          <p class="repo-desc">Static mirror of www.sbs-pro.be</p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> HTML</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/sbs-pro" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/sbs-pro/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        </div>
+      </section>
+
+      <section class="repo-section">
+        <h2>Overige <span class="count">1</span></h2>
+        <p class="section-intro">Repositories die (nog) niet in een categorie zijn ingedeeld.</p>
+        <div class="repo-grid">
+        <article class="repo-card">
+          <h3 class="repo-name"><a href="https://github.com/detectieservice/barina" rel="noopener" target="_blank">barina</a></h3>
+          <p class="repo-desc"><em>Geen beschrijving beschikbaar.</em></p>
+          <ul class="repo-meta">
+            <li><span class="label">Taal</span> —</li>
+            <li><span class="label">Bijgewerkt</span> 2026-06-23</li>
+          </ul>
+          <div class="repo-links">
+            <a class="btn" href="https://github.com/detectieservice/barina" rel="noopener" target="_blank">GitHub</a>
+            <a class="btn btn-ghost" href="https://detectieservice.github.io/barina/" rel="noopener" target="_blank">Live site</a>
+          </div>
+        </article>
+        </div>
+      </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Detectieservice Kempen (DSK) · Lekdetectie &amp; vochtproblemen ·
+        <a href="index.html">Terug naar de homepage</a></p>
+      <p>Repository-overzicht automatisch samengesteld op 2026-06-25.
+        Bron: <a href="https://github.com/detectieservice" rel="noopener" target="_blank">github.com/detectieservice</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
