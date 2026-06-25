@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="nl-BE">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Repositories vergelijken | Detectieservice Kempen (DSK)</title>
+  <meta name="description" content="Live previews en vergelijking van alle detectieservice-repositories: overeenkomsten en verschillen naast elkaar.">
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://detectieservice.github.io/repos-vergelijk.html">
+  <style>
+    :root{--brand:#0b5cab;--brand-dark:#08406f;--accent:#13a89e;--same:#1f9d57;--diff:#d9772b;
+      --ink:#1a2330;--muted:#5b6675;--line:#e3e8ef;--bg:#f5f7fa;--card:#fff;}
+    *{box-sizing:border-box;}
+    body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+      color:var(--ink);background:var(--bg);line-height:1.6;}
+    a{color:var(--brand);}
+    .wrap{max-width:1180px;margin:0 auto;}
+    .site-header{background:linear-gradient(135deg,var(--brand),var(--brand-dark));color:#fff;padding:46px 20px 38px;}
+    .eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;opacity:.85;margin:0 0 8px;}
+    .site-header h1{margin:0 0 12px;font-size:2rem;}
+    .site-header p{margin:0;max-width:760px;opacity:.95;}
+    .note{margin-top:16px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);
+      padding:12px 16px;border-radius:10px;font-size:.9rem;max-width:760px;}
+    main{padding:36px 20px 64px;}
+    .toc{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 30px;}
+    .toc a{background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 14px;
+      text-decoration:none;font-size:.85rem;font-weight:600;}
+    .toc a:hover{background:#eaf2fb;}
+    .cmp{margin-bottom:54px;}
+    .cmp h2{font-size:1.4rem;margin:0 0 12px;display:flex;align-items:center;gap:10px;
+      border-bottom:2px solid var(--line);padding-bottom:10px;}
+    .count{font-size:.8rem;background:var(--accent);color:#fff;border-radius:999px;padding:2px 10px;font-weight:600;}
+    .analyse{background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:0 0 18px;}
+    .analyse p{margin:6px 0;font-size:.94rem;color:var(--ink);}
+    .tag{display:inline-block;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+      color:#fff;border-radius:6px;padding:2px 8px;margin-right:8px;vertical-align:middle;}
+    .tag-same{background:var(--same);}
+    .tag-diff{background:var(--diff);}
+    /* Tracks */
+    .track.row{display:flex;gap:18px;overflow-x:auto;padding:4px 4px 16px;scroll-snap-type:x mandatory;}
+    .track.row .preview{flex:0 0 300px;scroll-snap-align:start;}
+    .track.gallery{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:18px;}
+    .preview{margin:0;background:#fff;border:1px solid var(--line);border-radius:12px;overflow:hidden;
+      display:flex;flex-direction:column;box-shadow:0 1px 2px rgba(16,32,64,.05);}
+    .frame{position:relative;width:100%;height:200px;background:#eef1f5;overflow:hidden;border-bottom:1px solid var(--line);}
+    .frame iframe{position:absolute;top:0;left:0;width:1280px;height:900px;border:0;
+      transform:scale(.30);transform-origin:top left;background:#fff;}
+    .frame-open{position:absolute;inset:0;z-index:2;}
+    figcaption{padding:12px 14px;display:flex;flex-direction:column;gap:6px;}
+    .p-name{font-size:.98rem;word-break:break-word;}
+    .p-desc{font-size:.85rem;color:var(--muted);}
+    .p-links{display:flex;gap:14px;font-size:.82rem;font-weight:600;}
+    .site-footer{border-top:1px solid var(--line);padding:26px 20px;color:var(--muted);font-size:.88rem;background:#fff;}
+    @media (max-width:560px){.site-header h1{font-size:1.55rem;} .frame{height:170px;} .frame iframe{transform:scale(.255);}}
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <p class="eyebrow">Detectieservice Kempen · GitHub</p>
+      <h1>Repositories vergelijken</h1>
+      <p>Live previews van alle 34 repositories, gegroepeerd op gelijkenis. Per groep staat een
+        analyse van <strong>overeenkomsten</strong> en <strong>verschillen</strong>; gelijkaardige sites staan
+        horizontaal naast elkaar zodat je ze direct kunt vergelijken.</p>
+      <p class="note">ℹ️ De previews zijn live <code>&lt;iframe&gt;</code>-weergaven die in jouw browser laden.
+        Sites die nog niet via GitHub Pages gepubliceerd zijn, of mirrors met een eigen domein, kunnen leeg blijven —
+        gebruik in dat geval de <em>Live</em>- of <em>GitHub</em>-link onder elke preview.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <nav class="toc">
+      <a href="#kopie">Identieke kopieën</a>
+      <a href="#dwk">Dakwerken Kempen-varianten</a>
+      <a href="#mirror">Externe mirrors</a>
+      <a href="#overig">Overig</a>
+      <a href="repos.html">↩ Volledige lijst</a>
+    </nav>
+
+      <section class="cmp" id="kopie">
+        <h2>DSKempen — (vrijwel) identieke kopieën <span class="count">9</span></h2>
+        <div class="analyse">
+          <p><span class="tag tag-same">Gelijkenissen</span> Allemaal afgeleid van de hoofdsite detectieservice.github.io: dezelfde lay-out, kleuren, teksten en pagina­structuur (DSK-lekdetectie). Visueel naast elkaar nagenoeg niet te onderscheiden.</p>
+          <p><span class="tag tag-diff">Verschillen</span> Ze verschillen alleen in repository-naam (en dus host-URL). roofrepair is expliciet een kopie van dskempen.be; de dskempen-clone-* repos zijn genummerde duplicaten; dsk-website / dsk-website2 zijn werk­kopieën zonder eigen beschrijving.</p>
+        </div>
+        <div class="track row">
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/" loading="lazy" title="Preview detectieservice.github.io" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/" target="_blank" rel="noopener" aria-label="Open detectieservice.github.io"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">detectieservice.github.io</strong>
+              <span class="p-desc">DSKempen</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/detectieservice.github.io" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/roofrepair/" loading="lazy" title="Preview roofrepair" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/roofrepair/" target="_blank" rel="noopener" aria-label="Open roofrepair"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">roofrepair</strong>
+              <span class="p-desc">Static mirror of dskempen.be (copy of detectieservice.github.io)</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/roofrepair/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/roofrepair" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dskempen-clone-1/" loading="lazy" title="Preview dskempen-clone-1" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dskempen-clone-1/" target="_blank" rel="noopener" aria-label="Open dskempen-clone-1"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dskempen-clone-1</strong>
+              <span class="p-desc">Copy of detectieservice.github.io (DSKempen)</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dskempen-clone-1/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dskempen-clone-1" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dskempen-clone-2/" loading="lazy" title="Preview dskempen-clone-2" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dskempen-clone-2/" target="_blank" rel="noopener" aria-label="Open dskempen-clone-2"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dskempen-clone-2</strong>
+              <span class="p-desc">Copy of detectieservice.github.io (DSKempen)</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dskempen-clone-2/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dskempen-clone-2" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dskempen-clone-3/" loading="lazy" title="Preview dskempen-clone-3" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dskempen-clone-3/" target="_blank" rel="noopener" aria-label="Open dskempen-clone-3"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dskempen-clone-3</strong>
+              <span class="p-desc">Copy of detectieservice.github.io (DSKempen)</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dskempen-clone-3/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dskempen-clone-3" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dskempen-clone-4/" loading="lazy" title="Preview dskempen-clone-4" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dskempen-clone-4/" target="_blank" rel="noopener" aria-label="Open dskempen-clone-4"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dskempen-clone-4</strong>
+              <span class="p-desc">Copy of detectieservice.github.io (DSKempen)</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dskempen-clone-4/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dskempen-clone-4" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dskempen-clone-5/" loading="lazy" title="Preview dskempen-clone-5" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dskempen-clone-5/" target="_blank" rel="noopener" aria-label="Open dskempen-clone-5"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dskempen-clone-5</strong>
+              <span class="p-desc">Copy of detectieservice.github.io (DSKempen)</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dskempen-clone-5/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dskempen-clone-5" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dsk-website/" loading="lazy" title="Preview dsk-website" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dsk-website/" target="_blank" rel="noopener" aria-label="Open dsk-website"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dsk-website</strong>
+              <span class="p-desc"><em>Geen beschrijving.</em></span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dsk-website/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dsk-website" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dsk-website2/" loading="lazy" title="Preview dsk-website2" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dsk-website2/" target="_blank" rel="noopener" aria-label="Open dsk-website2"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dsk-website2</strong>
+              <span class="p-desc"><em>Geen beschrijving.</em></span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dsk-website2/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dsk-website2" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cmp" id="dwk">
+        <h2>Dakwerken Kempen — merkvarianten <span class="count">10</span></h2>
+        <div class="analyse">
+          <p><span class="tag tag-same">Gelijkenissen</span> Gebouwd op één gedeeld &#x27;Dakwerken Kempen&#x27;-sjabloon (dakwerkenkempen.be): zelfde basisopbouw en stijl. Bedoeld als landingsvarianten per partner/sub-merk.</p>
+          <p><span class="tag tag-diff">Verschillen</span> Elke variant is gekoppeld aan een ander partnermerk (vloerservice, allcarrent, metalen, marlier, aralea, vdp, dimar, floorcouture, parking-diamant). roofrepair-premium wijkt het sterkst af: een &#x27;premium architecture-style&#x27; ontwerp i.p.v. het standaardsjabloon.</p>
+        </div>
+        <div class="track row">
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-vloerservice/" loading="lazy" title="Preview dakwerkenkempen-vloerservice" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-vloerservice/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-vloerservice"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-vloerservice</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-vloerservice) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-vloerservice/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-vloerservice" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-allcarrent/" loading="lazy" title="Preview dakwerkenkempen-allcarrent" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-allcarrent/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-allcarrent"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-allcarrent</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-allcarrent) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-allcarrent/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-allcarrent" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-metalen/" loading="lazy" title="Preview dakwerkenkempen-metalen" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-metalen/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-metalen"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-metalen</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-metalen) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-metalen/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-metalen" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-marlier/" loading="lazy" title="Preview dakwerkenkempen-marlier" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-marlier/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-marlier"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-marlier</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-marlier) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-marlier/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-marlier" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-aralea/" loading="lazy" title="Preview dakwerkenkempen-aralea" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-aralea/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-aralea"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-aralea</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-aralea) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-aralea/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-aralea" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-vdp/" loading="lazy" title="Preview dakwerkenkempen-vdp" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-vdp/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-vdp"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-vdp</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-vdp) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-vdp/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-vdp" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-dimar/" loading="lazy" title="Preview dakwerkenkempen-dimar" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-dimar/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-dimar"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-dimar</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-dimar) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-dimar/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-dimar" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-floorcouture/" loading="lazy" title="Preview dakwerkenkempen-floorcouture" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-floorcouture/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-floorcouture"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-floorcouture</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-floorcouture) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-floorcouture/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-floorcouture" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenkempen-parking-diamant/" loading="lazy" title="Preview dakwerkenkempen-parking-diamant" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenkempen-parking-diamant/" target="_blank" rel="noopener" aria-label="Open dakwerkenkempen-parking-diamant"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenkempen-parking-diamant</strong>
+              <span class="p-desc">Dakwerken Kempen (dakwerkenkempen-parking-diamant) — dakwerkenkempen.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenkempen-parking-diamant/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenkempen-parking-diamant" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/roofrepair-premium/" loading="lazy" title="Preview roofrepair-premium" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/roofrepair-premium/" target="_blank" rel="noopener" aria-label="Open roofrepair-premium"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">roofrepair-premium</strong>
+              <span class="p-desc">Roof Repair Kempen — premium architecture-style site</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/roofrepair-premium/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/roofrepair-premium" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cmp" id="mirror">
+        <h2>Statische mirrors — elk een andere onderneming <span class="count">14</span></h2>
+        <div class="analyse">
+          <p><span class="tag tag-same">Gelijkenissen</span> Allemaal statische mirrors (bevroren kopieën) van bestaande bedrijfswebsites, gehost via GitHub Pages.</p>
+          <p><span class="tag tag-diff">Verschillen</span> Inhoudelijk volledig verschillend: elk is een andere onderneming met eigen huisstijl, sector en domeinnaam. Hieronder per site het oorspronkelijke domein.</p>
+        </div>
+        <div class="track gallery">
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/marlierhaarden/" loading="lazy" title="Preview marlierhaarden" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/marlierhaarden/" target="_blank" rel="noopener" aria-label="Open marlierhaarden"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">marlierhaarden</strong>
+              <span class="p-desc">Static mirror of www.marlierhaarden.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/marlierhaarden/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/marlierhaarden" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/hus-dakbouw/" loading="lazy" title="Preview hus-dakbouw" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/hus-dakbouw/" target="_blank" rel="noopener" aria-label="Open hus-dakbouw"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">hus-dakbouw</strong>
+              <span class="p-desc">Static mirror of hus-dakbouw.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/hus-dakbouw/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/hus-dakbouw" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/parking-diamant/" loading="lazy" title="Preview parking-diamant" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/parking-diamant/" target="_blank" rel="noopener" aria-label="Open parking-diamant"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">parking-diamant</strong>
+              <span class="p-desc">Static mirror of parking-diamant.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/parking-diamant/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/parking-diamant" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerkenvandeneynden/" loading="lazy" title="Preview dakwerkenvandeneynden" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerkenvandeneynden/" target="_blank" rel="noopener" aria-label="Open dakwerkenvandeneynden"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerkenvandeneynden</strong>
+              <span class="p-desc">Static mirror of www.dakwerkenvandeneynden.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerkenvandeneynden/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerkenvandeneynden" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/vloerservice/" loading="lazy" title="Preview vloerservice" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/vloerservice/" target="_blank" rel="noopener" aria-label="Open vloerservice"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">vloerservice</strong>
+              <span class="p-desc">Static mirror of vloerservice.com</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/vloerservice/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/vloerservice" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/metalenvandenaudenaerde/" loading="lazy" title="Preview metalenvandenaudenaerde" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/metalenvandenaudenaerde/" target="_blank" rel="noopener" aria-label="Open metalenvandenaudenaerde"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">metalenvandenaudenaerde</strong>
+              <span class="p-desc">Static mirror of metalenvandenaudenaerde.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/metalenvandenaudenaerde/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/metalenvandenaudenaerde" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dimar/" loading="lazy" title="Preview dimar" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dimar/" target="_blank" rel="noopener" aria-label="Open dimar"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dimar</strong>
+              <span class="p-desc">Static mirror of www.dimar.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dimar/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dimar" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/allcarrent/" loading="lazy" title="Preview allcarrent" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/allcarrent/" target="_blank" rel="noopener" aria-label="Open allcarrent"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">allcarrent</strong>
+              <span class="p-desc">Static mirror of www.allcarrent.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/allcarrent/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/allcarrent" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/dakwerken-hendrickx/" loading="lazy" title="Preview dakwerken-hendrickx" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/dakwerken-hendrickx/" target="_blank" rel="noopener" aria-label="Open dakwerken-hendrickx"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">dakwerken-hendrickx</strong>
+              <span class="p-desc">Static mirror of www.dakwerken-hendrickx.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/dakwerken-hendrickx/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/dakwerken-hendrickx" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/vdphomesolutions/" loading="lazy" title="Preview vdphomesolutions" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/vdphomesolutions/" target="_blank" rel="noopener" aria-label="Open vdphomesolutions"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">vdphomesolutions</strong>
+              <span class="p-desc">Static mirror of vdphomesolutions.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/vdphomesolutions/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/vdphomesolutions" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/aralea/" loading="lazy" title="Preview aralea" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/aralea/" target="_blank" rel="noopener" aria-label="Open aralea"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">aralea</strong>
+              <span class="p-desc">Static mirror of aralea.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/aralea/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/aralea" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/floorcouture/" loading="lazy" title="Preview floorcouture" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/floorcouture/" target="_blank" rel="noopener" aria-label="Open floorcouture"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">floorcouture</strong>
+              <span class="p-desc">Static mirror of floorcouture.be (small version)</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/floorcouture/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/floorcouture" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/gjtimmerwerken/" loading="lazy" title="Preview gjtimmerwerken" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/gjtimmerwerken/" target="_blank" rel="noopener" aria-label="Open gjtimmerwerken"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">gjtimmerwerken</strong>
+              <span class="p-desc">Static mirror of www.gjtimmerwerken.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/gjtimmerwerken/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/gjtimmerwerken" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/sbs-pro/" loading="lazy" title="Preview sbs-pro" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/sbs-pro/" target="_blank" rel="noopener" aria-label="Open sbs-pro"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">sbs-pro</strong>
+              <span class="p-desc">Static mirror of www.sbs-pro.be</span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/sbs-pro/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/sbs-pro" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="cmp" id="overig">
+        <h2>Overig <span class="count">1</span></h2>
+        <div class="analyse">
+          <p><span class="tag tag-same">Gelijkenissen</span> —</p>
+          <p><span class="tag tag-diff">Verschillen</span> barina heeft geen beschrijving en geen gedetecteerde taal; inhoud onbekend tot nader onderzoek.</p>
+        </div>
+        <div class="track gallery">
+          <figure class="preview">
+            <div class="frame">
+              <iframe src="https://detectieservice.github.io/barina/" loading="lazy" title="Preview barina" referrerpolicy="no-referrer"></iframe>
+              <a class="frame-open" href="https://detectieservice.github.io/barina/" target="_blank" rel="noopener" aria-label="Open barina"></a>
+            </div>
+            <figcaption>
+              <strong class="p-name">barina</strong>
+              <span class="p-desc"><em>Geen beschrijving.</em></span>
+              <span class="p-links">
+                <a href="https://detectieservice.github.io/barina/" target="_blank" rel="noopener">Live</a>
+                <a href="https://github.com/detectieservice/barina" target="_blank" rel="noopener">GitHub</a>
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Detectieservice Kempen (DSK) · <a href="repos.html">Repository-overzicht</a> ·
+        <a href="index.html">Homepage</a></p>
+      <p>Vergelijking samengesteld op 2026-06-25. Bron: <a href="https://github.com/detectieservice" target="_blank" rel="noopener">github.com/detectieservice</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>
